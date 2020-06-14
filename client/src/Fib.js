@@ -68,7 +68,7 @@ class Fib extends Component {
         </form>
 
         <h3>Indexes I have seen:</h3>
-        {this.renderSeenIndexes()}
+        {/* {this.renderSeenIndexes()} */}
 
         <h3>Calculated Values:</h3>
         {this.renderValues()}
