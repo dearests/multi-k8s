@@ -21,7 +21,7 @@ class Fib extends Component {
   async fetchIndexes() {
     const seenIndexes = await axios.get('/api/values/all');
     this.setState({
-      seenIndexes: seenIndexes.data || [],
+      seenIndexes: seenIndexes.data,
     });
   }
 
@@ -35,7 +35,12 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    return this.state.seenIndexes.map(({ number }) => number).join(', ');
+    return (
+      this,
+      state.seenIndexes.length
+        ? this.state.seenIndexes.map(({ number }) => number).join(', ')
+        : ''
+    );
   }
 
   renderValues() {
