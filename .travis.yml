@@ -5,9 +5,8 @@ env:
   global:
   - SHA=$(git rev-parse HEAD)
   - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+  - secure: DxTHiS9p8DssldxEbC/lDNUB4jpHBPVTeftfaArCOnBxNEINO+T+a0uFE8Y2UjTFFe2n+QvgDhcUkx/owDl8K2g1OybbmCc7Lw8Dw0/1Li+chUVr1xE6S+hNWxsssV4CkGCQx/qVvXBDQ4qAAgYObGUq04Iu2gDYBNKPK403eDx6YjEx71TN6T2Vz3Z1HZuyY/FI9FU1WqTGxhuwajxQOynbtDDcxyEKwDLOFiZkzewMDxVdpV06FWQWjbxfZUWdYiE+89IR66hYi6zMutmSIkknhPqfsGxUkPDgMDdPjp4zCSB7U1rHZ5ab07DJ2vI+mQ/JT3H6lf8RkBioxUytN8Kn1a2i8OaiW9E0FfdkNHeoVBLpJwiFA7ychLeQWunedzTmz40JyGLh8a25XHLu1xmXmN/BBHmqfIIJ1GWJHGPOmBF/5GXCTS1cCi04EBdJn6rA7OPkIyiEKudnNpGoZMVbVIVGHhQlh9NrJac2yix9WBajZTX65LFOi6KcJtRO4A607aAfmGLLP3ydenKx7RwrqCDDO9NtH/g6yK/4GfcozHKcEw4ZCqHBP7+RA4j/+9t1uw6igcazSXgnNte+1jTyth1L9FFKy/NGzX96bXvOel5HpsMS1PYHg87e8DT2W/tagATlotNWscViiPy6a1JCQ/TqVzfZ6u1721yD4/0=
 before_install:
-- openssl aes-256-cbc -K $encrypted_9f3b5599b056_key -iv $encrypted_9f3b5599b056_iv
-  -in service-account.json.enc -out service-account.json -d
 - curl https://sdk.cloud.google.com | bash > /dev/null;
 - source $HOME/google-cloud-sdk/path.bash.inc
 - gcloud components update kubectl
